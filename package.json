@@ -1,6 +1,6 @@
 {
 
-	"name": "personal-lint",
+	"name": "eslint-plugin-personnallinter",
 	"version": "1.0.0",
 	"description": "personnal lint rules",
 
@@ -37,7 +37,9 @@
 		"@typescript-eslint/parser": "6.16.0",
 		"check-version-modules": "2.0.0",
 		"colors": "1.4.0",
-		"eslint": "8.56.0"
+		"eslint": "8.56.0",
+		"eslint-plugin-react": "7.33.2",
+		"eslint-plugin-react-hooks": "4.6.0"
 	},
 	"optionalDependencies": {},
 	"keywords": [
