@@ -1,0 +1,48 @@
+{
+
+  "name": "personal-lint",
+  "version": "1.0.0",
+  "description": "personnal lint rules",
+
+  "type": "commonjs",
+  "main": "./lib/cjs/main.cjs",
+
+  "exports": {
+    ".": {
+      "require": {
+        "default": "./lib/cjs/main.cjs"
+      }
+    }
+  },
+
+  "scripts": {},
+
+  "files": [
+    "/lib"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+
+  "dependencies": {},
+  "devDependencies": {
+  },
+  "optionalDependencies": {},
+  "keywords": [
+    "lint",
+    "eslint",
+    "tslint"
+  ],
+  "author": "Sébastien VIDAL",
+  "license": "ISC",
+
+  "homepage": "https://github.com/Psychopoulet/personal-lint#readme",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Psychopoulet/personal-lint"
+  },
+  "bugs": {
+    "url": "https://github.com/Psychopoulet/personal-lint/issues"
+  }
+
+}
