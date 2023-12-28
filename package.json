@@ -1,7 +1,7 @@
 {
 
 	"name": "eslint-plugin-personnallinter",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"description": "personnal lint rules",
 
 	"type": "commonjs",
@@ -17,9 +17,10 @@
 
 	"scripts": {
 
+		"lint": "npx eslint -c .eslintrc.js --ext .cjs ./lib/**/*",
 		"check-updates": "npx check-version-modules",
 
-		"tests": "npm run-script check-updates",
+		"tests": "npm run-script lint && npm run-script check-updates",
 		"ci": "npm run-script tests"
 
 	},
@@ -31,15 +32,15 @@
 		"node": ">=16.0.0"
 	},
 
-	"dependencies": {},
-	"devDependencies": {
+	"dependencies": {
 		"@typescript-eslint/eslint-plugin": "6.16.0",
 		"@typescript-eslint/parser": "6.16.0",
-		"check-version-modules": "2.0.0",
-		"colors": "1.4.0",
 		"eslint": "8.56.0",
 		"eslint-plugin-react": "7.33.2",
 		"eslint-plugin-react-hooks": "4.6.0"
+	},
+	"devDependencies": {
+		"check-version-modules": "2.0.0"
 	},
 	"optionalDependencies": {},
 	"keywords": [
