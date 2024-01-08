@@ -17,7 +17,7 @@
 
 	"scripts": {
 
-		"lint": "npx eslint -c .eslintrc.js --ext .cjs ./lib/**/*",
+		"lint": "npx eslint -c .eslintrc.js --ext .cjs --ext .js ./lib/**/*",
 		"check-updates": "npx check-version-modules",
 		"unit-tests": "npx nyc --reporter=html --reporter=text mocha",
 
