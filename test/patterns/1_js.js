@@ -1,13 +1,19 @@
 
-const { exec } = require("child_process");
+// no-unused-vars
 
-[ "array-bracket-newline" ] // array-bracket-newline
+var noVar = "test"; // no-var
 
-	 // no-mixed-spaces-and-tabs
+function doSomething (err, callback) {
 
-var quotes =  'test'; // quotes
-var noMultiSpaces =  "test"; // no-multi-spaces
+	 if (err) { // @stylistic/no-mixed-spaces-and-tabs
+        callback(err); // n/callback-return
+    }
 
-exec((cb) => {
-	return cb(); // n/callback-return
-})
+    callback();
+
+}
+
+const arrayBracketNewline = [ "test 1", "test 2" ]; // @stylistic/array-bracket-newline
+
+const noMultiSpaces =  "test"; // @stylistic/no-multi-spaces
+const quotes = 'test'; // @stylistic/quotes
