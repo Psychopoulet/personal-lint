@@ -19,7 +19,7 @@
 
 		"prepare": "npx husky install",
 
-		"lint": "npx eslint --config .eslintrc.js --ext .js,.cjs ./lib/**/* && npx eslint --config .eslintrc.js --ignore-pattern test/patterns/* ./test/**/*",
+		"lint": "npx eslint --config .eslintrc.js --ext .js,.cjs --ignore-pattern test/patterns/* ./lib/**/* ./test/**/*",
 		"check-requires": "npx used-deps-analyzer ./package.json ./lib --no-dev --shadows @stylistic/eslint-plugin @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-plugin-n eslint-plugin-react eslint-plugin-react-hooks",
 		"check-updates": "npx check-version-modules",
 		"unit-tests": "npx nyc --reporter=html --reporter=text mocha",
