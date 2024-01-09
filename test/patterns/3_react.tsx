@@ -26,7 +26,7 @@ function doSomething (err, callback) {
 
 }
 
-const arrayBracketNewline = [ "test 1", "test 2" ]; // @stylistic/array-bracket-newline
+const arrayBracketNewline = [ "test 1", "test 2", "test 3" ]; // @stylistic/array-bracket-newline
 
 const noMultiSpaces =  "test"; // @stylistic/no-multi-spaces
 const quotes = 'test'; // @stylistic/quotes
