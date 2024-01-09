@@ -17,10 +17,13 @@
 
 	"scripts": {
 
-		"lint": "npx eslint -c .eslintrc.js --ext .cjs ./lib/**/*",
-		"check-updates": "npx check-version-modules",
+		"prepare": "npx husky install",
 
-		"tests": "npm run-script lint && npm run-script check-updates",
+		"lint": "npx eslint --config .eslintrc.js --ext .js,.cjs ./lib/**/* && npx eslint --config .eslintrc.js --ignore-pattern test/patterns/* ./test/**/*",
+		"check-updates": "npx check-version-modules",
+		"unit-tests": "npx nyc --reporter=html --reporter=text mocha",
+
+		"tests": "npm run-script lint && npm run-script check-updates && npm run-script unit-tests",
 		"ci": "npm run-script tests"
 
 	},
@@ -33,16 +36,31 @@
 	},
 
 	"dependencies": {
-		"@typescript-eslint/eslint-plugin": "6.16.0",
-		"@typescript-eslint/parser": "6.16.0",
+		"@stylistic/eslint-plugin": "1.5.3",
+		"@typescript-eslint/eslint-plugin": "6.18.1",
+		"@typescript-eslint/parser": "6.18.1",
 		"eslint": "8.56.0",
+		"eslint-plugin-n": "16.6.2",
 		"eslint-plugin-react": "7.33.2",
 		"eslint-plugin-react-hooks": "4.6.0"
 	},
 	"devDependencies": {
-		"check-version-modules": "2.0.0"
+		"check-version-modules": "2.0.0",
+		"coveralls": "3.1.1",
+		"husky": "8.0.3",
+		"mocha": "10.2.0",
+		"nyc": "15.1.0"
 	},
-	"optionalDependencies": {},
+	"optionalDependencies": {
+		"colors": "1.4.0"
+	},
+
+	"husky": {
+	  "hooks": {
+		"pre-commit": "npm run-script lint",
+		"pre-push": "npm run-script unit-tests"
+	  }
+	},
 	"keywords": [
 		"lint",
 		"eslint",
