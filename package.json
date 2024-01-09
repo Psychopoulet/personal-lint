@@ -17,7 +17,9 @@
 
 	"scripts": {
 
-		"lint": "npx eslint -c .eslintrc.js --ext .js,.cjs ./lib/**/* && npx eslint -c .eslintrc.js --ext .js,.cjs ./test/**/*",
+		"prepare": "npx husky install",
+
+		"lint": "npx eslint --config .eslintrc.js --ext .js,.cjs ./lib/**/* && npx eslint --config .eslintrc.js --ignore-pattern test/patterns/* ./test/**/*",
 		"check-updates": "npx check-version-modules",
 		"unit-tests": "npx nyc --reporter=html --reporter=text mocha",
 
@@ -55,7 +57,8 @@
 
 	"husky": {
 	  "hooks": {
-		"pre-push": "npm run-script tests"
+		"pre-commit": "npm run-script lint",
+		"pre-push": "npm run-script unit-tests"
 	  }
 	},
 	"keywords": [
