@@ -1,5 +1,3 @@
 module.exports = {
-    "extends": [
-        "plugin:eslint-plugin-personnallinter/react"
-	]
+    "extends": [ "plugin:eslint-plugin-personnallinter/react" ]
 };

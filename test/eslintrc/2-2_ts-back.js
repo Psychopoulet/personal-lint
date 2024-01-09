@@ -1,5 +1,3 @@
 module.exports = {
-    "extends": [
-        "plugin:eslint-plugin-personnallinter/ts-back"
-	]
+    "extends": [ "plugin:eslint-plugin-personnallinter/ts-back" ]
 };
