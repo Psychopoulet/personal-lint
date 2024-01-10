@@ -1,7 +1,7 @@
 {
 
 	"name": "eslint-plugin-personnallinter",
-	"version": "1.3.0",
+	"version": "1.3.1",
 	"description": "personnal lint rules",
 
 	"type": "commonjs",
